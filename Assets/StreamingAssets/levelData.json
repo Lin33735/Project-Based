@@ -1,0 +1,21 @@
+{
+	"checklistName": "Interactables",
+	"items":[
+		{
+			"InteractionName": "Example1",
+			"InteractionActive": true
+		},
+		{
+			"InteractionName": "Example2",
+			"InteractionActive": false
+		},
+				{
+			"InteractionName": "Example3",
+			"InteractionActive": false
+		},
+				{
+			"InteractionName": "Example4",
+			"InteractionActive": false
+		}
+	]
+}
