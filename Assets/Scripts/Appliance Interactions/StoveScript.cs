@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class StoveScript : MonoBehaviour
@@ -6,12 +7,11 @@ public class StoveScript : MonoBehaviour
 
     //public GameObject Stove;
 
-
-
+    private Interaction interactTxt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+       
     }
 
     private IEnumerator StoveColor()
@@ -32,7 +32,7 @@ public class StoveScript : MonoBehaviour
         }
     }
 
-    public void OnMouseOver()
+    private void OnMouseOver()
     {
         Debug.Log("Player is hovering over the Stove");
     }
