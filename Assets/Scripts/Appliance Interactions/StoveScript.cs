@@ -9,7 +9,7 @@ public class StoveScript : MonoBehaviour
 
     public GameObject Player;
 
-
+    //public GameObject InteractionText;
 
     private Interaction interactTxt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -44,6 +44,7 @@ public class StoveScript : MonoBehaviour
         {
             Debug.Log("Player is hovering over the Stove");
             Debug.Log("Distance to Stove: " + dist);
+            //InteractionText.SetActive(true);
         }
         
     }
