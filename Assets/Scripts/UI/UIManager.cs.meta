@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: e60aa076c4f0f9b439ed4d49ecfa8ddd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PauseMenu: {instanceID: 0}
+  - PlayerUI: {instanceID: 0}
+  - CheckList: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

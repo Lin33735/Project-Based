@@ -5,7 +5,11 @@ using UnityEngine;
 public class StoveScript : MonoBehaviour
 {
 
-    //public GameObject Stove;
+    public GameObject Stove;
+
+    public GameObject Player;
+
+
 
     private Interaction interactTxt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,8 +36,15 @@ public class StoveScript : MonoBehaviour
         }
     }
 
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
-        Debug.Log("Player is hovering over the Stove");
+        float dist = Vector3.Distance(Player.transform.position, Stove.transform.position);
+        
+        if(dist <= 1.8)
+        {
+            Debug.Log("Player is hovering over the Stove");
+            Debug.Log("Distance to Stove: " + dist);
+        }
+        
     }
 }

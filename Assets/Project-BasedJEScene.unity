@@ -718,6 +718,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &780074676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5284194342337872639, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
+  m_PrefabInstance: {fileID: 2076284363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787489613
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfe7891a10d15147b4739559e279647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoveScript
+  Stove: {fileID: 780074676}
+  Player: {fileID: 1941615109}
 --- !u!64 &1175884128
 MeshCollider:
   m_ObjectHideFlags: 0
