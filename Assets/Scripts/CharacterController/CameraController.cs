@@ -4,7 +4,7 @@ public class CameraController : MonoBehaviour
 {
     public bool debugs = true;
     Vector3 myLook;
-    float lookSpeed = 50f;
+    float lookSpeed = 100f;
     [SerializeField] private Camera myCam;
     [SerializeField] private float camLock = 90f;
     float onStartTimer;

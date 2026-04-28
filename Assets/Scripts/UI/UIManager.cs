@@ -12,16 +12,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject CheckList;
 
     public bool gamePaused;
+    public bool cursorToggled;
 
     void Awake()
-    {
+    {   
         Time.timeScale = 1.0f;
+        cursorToggled = false;
     }
 
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            ToggleCursor();
             if (gamePaused)
             {
                 Resume();
@@ -34,6 +37,25 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E))
         {
             SetActivePanel(CheckList);
+            ToggleCursor();
+        }
+    }
+
+    void ToggleCursor()
+    {
+        if (cursorToggled == false)
+        {
+            cursorToggled = true;
+            Time.timeScale = 0f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            cursorToggled = false;
+            Time.timeScale = 1.0f;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -41,7 +63,6 @@ public class UIManager : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         PlayerUI.SetActive(true);
-        Time.timeScale = 1.0f;
         gamePaused = false;
     }
 
@@ -49,7 +70,6 @@ public class UIManager : MonoBehaviour
     {
         PauseMenu.SetActive(true);
         PlayerUI.SetActive(false);
-        Time.timeScale = 0f;
         gamePaused = true;
     }
 
