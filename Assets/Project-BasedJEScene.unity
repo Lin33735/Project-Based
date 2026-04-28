@@ -2792,6 +2792,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8875471046640856600, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2836,9 +2840,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: -2624300528187796838, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1567831391462937180, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
       propertyPath: m_Name
       value: level layout (pb)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547870734305339971, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5519674736209700812, guid: 222c3298cec0298428a25d2689b90ac6, type: 3}
       propertyPath: m_TagString
