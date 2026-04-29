@@ -9,13 +9,14 @@ public class StoveScript : MonoBehaviour
 
     public GameObject Player;
 
-    //public GameObject InteractionText;
+    public GameObject InteractionText;
 
     private Interaction interactTxt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+        InteractionText.SetActive(false);
+        
     }
 
     private IEnumerator StoveColor()
@@ -36,7 +37,7 @@ public class StoveScript : MonoBehaviour
         }
     }
 
-    public void OnMouseOver()
+    private void OnMouseOver()
     {
         float dist = Vector3.Distance(Player.transform.position, Stove.transform.position);
         
@@ -44,8 +45,12 @@ public class StoveScript : MonoBehaviour
         {
             Debug.Log("Player is hovering over the Stove");
             Debug.Log("Distance to Stove: " + dist);
-            //InteractionText.SetActive(true);
+            InteractionText.SetActive(true);
         }
-        
+    }
+
+    private void OnMouseExit()
+    {
+        InteractionText.SetActive(false);
     }
 }
