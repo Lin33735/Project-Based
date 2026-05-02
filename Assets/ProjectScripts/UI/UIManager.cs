@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject PlayerUI;
     [SerializeField] GameObject CheckList;
+    [SerializeField] GameObject Score;
 
     public bool gamePaused;
     public bool cursorToggled;
@@ -24,7 +26,6 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            ToggleCursor();
             if (gamePaused)
             {
                 Resume();
@@ -61,6 +62,7 @@ public class UIManager : MonoBehaviour
 
     void Resume()
     {
+        ToggleCursor();
         PauseMenu.SetActive(false);
         PlayerUI.SetActive(true);
         gamePaused = false;
@@ -68,6 +70,7 @@ public class UIManager : MonoBehaviour
 
     void Pause()
     {
+        ToggleCursor();
         PauseMenu.SetActive(true);
         PlayerUI.SetActive(false);
         gamePaused = true;
@@ -97,5 +100,13 @@ public class UIManager : MonoBehaviour
     public void ResumeButton()
     {
         Resume();
+    }
+
+    public void LevelEnd(float score)
+    {
+        Time.timeScale = 0f;
+        Score.SetActive(true);
+        TMP_Text totalScore = Score.GetComponentInChildren<TMP_Text>();
+        totalScore.text = $"Completion: {score}%";
     }
 }
