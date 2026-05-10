@@ -2,20 +2,20 @@
 	"checklistName": "Interactables",
 	"items":[
 		{
-			"InteractionName": "Example1",
-			"InteractionActive": true
+			"InteractionName": "Task 1",
+			"SafetyRating": "Safe"
 		},
 		{
-			"InteractionName": "Example2",
-			"InteractionActive": false
+			"InteractionName": "Task 2",
+			"SafetyRating": "Unsafe"
 		},
 				{
-			"InteractionName": "Example3",
-			"InteractionActive": false
+			"InteractionName": "Task 3",
+			"SafetyRating": "Hazardous"
 		},
 				{
-			"InteractionName": "Example4",
-			"InteractionActive": false
+			"InteractionName": "Task 4",
+			"SafetyRating": "Safe"
 		}
 	]
 }

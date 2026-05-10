@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChecklistItems
 {
     public string InteractionName;
-    public bool InteractionActive;
+    public string SafetyRating;
 }
 
 [Serializable]

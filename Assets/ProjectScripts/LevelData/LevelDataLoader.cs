@@ -12,6 +12,7 @@ public class LevelDataLoader : MonoBehaviour
     [SerializeField] private string jsonFileName = "levelData.json";
     [SerializeField] private Transform contentPanel;
     [SerializeField] private GameObject togglePrefab;
+    [SerializeField] private GameObject dropDownPrefab;
 
     private ChecklistData level;
     private float score;
@@ -36,8 +37,19 @@ public class LevelDataLoader : MonoBehaviour
 
             for (int i = 0; i < level.items.Count; i++)
             {
-                Debug.Log(level.items[i].InteractionActive);
                 Debug.Log(level.items[i].InteractionName);
+                Debug.Log(level.items[i].SafetyRating);
+
+                GameObject dropDownObj = Instantiate(dropDownPrefab, contentPanel);
+                dropDownObj.name = $"Task {i}";
+                TMP_Text dropDownText = dropDownObj.GetComponent<TMP_Text>();
+                dropDownText.text = level.items[i].InteractionName;
+            }
+
+            /*for (int i = 0; i < level.items.Count; i++)
+            {
+                Debug.Log(level.items[i].InteractionName);
+                Debug.Log(level.items[i].SafetyRating);
 
                 GameObject toggleObj = Instantiate(togglePrefab, contentPanel);
                 toggleObj.name = "Task " + i;
@@ -46,7 +58,7 @@ public class LevelDataLoader : MonoBehaviour
 
                 toggleText.text = level.items[i].InteractionName;
                 toggle.isOn = false;
-            }
+            }*/
         }
         else
         {
@@ -57,12 +69,17 @@ public class LevelDataLoader : MonoBehaviour
     {   
         for (int i = 0; i < level.items.Count; i++)
         {
-            GameObject toggleObj = GameObject.Find("Task "+ i);
+            GameObject dropDownObj = GameObject.Find("Task " + i);
+            TMP_Dropdown dropdown = dropDownObj.GetComponentInChildren<TMP_Dropdown>();
+            Debug.Log(dropdown.captionText.text);
+            if (level.items[i].SafetyRating == dropdown.captionText.text) { score++; }
+
+            /*GameObject toggleObj = GameObject.Find("Task "+ i);
             Toggle toggle = toggleObj.GetComponent<Toggle>();
             if (level.items[i].InteractionActive == toggle.isOn)
             {
                 score++;
-            }
+            }*/
         }
         UIManager script = GetComponent<UIManager>();
         if (script != null)
