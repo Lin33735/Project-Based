@@ -2,19 +2,19 @@
 	"checklistName": "Interactables",
 	"items":[
 		{
-			"InteractionName": "Task 1",
+			"InteractionName": "Stove",
 			"SafetyRating": "Safe"
 		},
 		{
-			"InteractionName": "Task 2",
+			"InteractionName": "Radiator",
 			"SafetyRating": "Unsafe"
 		},
 				{
-			"InteractionName": "Task 3",
+			"InteractionName": "Boiler",
 			"SafetyRating": "Hazardous"
 		},
 				{
-			"InteractionName": "Task 4",
+			"InteractionName": "Ventalation",
 			"SafetyRating": "Safe"
 		}
 	]
